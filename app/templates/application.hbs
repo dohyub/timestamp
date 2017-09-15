@@ -1,5 +1,9 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<!-- {{action "push"}}은 button을 눌렀을때
+     route에서 actions라는 helper에 작성한
+     push함수가 실행됨을 의미 -->
+<button {{action "push"}}>{{time}}</button>
+<ul>
+  {{#each model as |stamp|}}
+  <li>{{stamp}}</li>
+  {{/each}}
+</ul>
